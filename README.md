@@ -26,27 +26,34 @@ Frontend
 - Drag & Drop nativo del navegador
 
 ## Comandos 
+
 -Obtener tareas
+
 curl -H "Accept: application/json" http://localhost:8080/api/tasks
 
 -Crear una tarea
+
 curl -X POST http://localhost:8080/api/tasks \
   -H "Content-Type: application/json" \
   -H "Accept: application/json" \
   -d '{"title":"Mi primera task","status":"backlog"}'
 
 -Actualizar tarea
+
 curl -X PATCH http://localhost:8080/api/tasks/1 \
   -H "Content-Type: application/json" \
   -H "Accept: application/json" \
   -d '{"status":"in_progress"}'
 
 -Eliminar tarea
+
 curl -X DELETE http://localhost:8080/api/tasks/1 \
   -H "Accept: application/json"
 
 -Acceso a la app
+
 http://localhost:8080/tasks
+
 
 
 
