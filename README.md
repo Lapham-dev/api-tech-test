@@ -1,30 +1,65 @@
-# Laravel Tasks API
+# Proyecto "Agenda Digital"
+Aplicación tipo Trello desarrollada con Laravel + Docker, que permite gestionar tareas mediante una API REST y una interfaz web con Drag & drop.
 
-Simple REST API built with Laravel, Docker and MySQL.  
-This project implements a basic CRUD for tasks as part of a technical test.
+## Funcionalidades
+- Crear tareas nuevas
+- Visualización en 3 columnas
+- Movimiento de tareas entre columnas mediante Drag & Drop
+- Persistencia de tareas en base de datos "Mysql"
+- Edición y eliminación de tareas
+- API REST desacoplada del frontend
+- Entorno completamente dockerizado
 
----
-
-## 🧱 Stack
-
+## Tecnologías utilizadas
+Backend
 - PHP 8.2
 - Laravel
-- MySQL
-- Docker
-- Nginx
+- Eloquent ORM
+- MySQL 8
+- API REST (JSON)
 
----
+Frontend
+- Blade (Laravel Views)
+- HTML5
+- CSS
+- JavaScript (Vanilla JS)
+- Drag & Drop nativo del navegador
 
-## 🚀 Setup
+## Comandos 
 
-### Requirements
-- Docker
-- Docker Compose
+-Obtener tareas
 
-### Installation
+curl -H "Accept: application/json" http://localhost:8080/api/tasks
 
-```bash
-docker compose up -d
-docker exec -it laravel_app php artisan migrate
+-Crear una tarea
+
+curl -X POST http://localhost:8080/api/tasks \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json" \
+  -d '{"title":"Mi primera task","status":"backlog"}'
+
+-Actualizar tarea
+
+curl -X PATCH http://localhost:8080/api/tasks/1 \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json" \
+  -d '{"status":"in_progress"}'
+
+-Eliminar tarea
+
+curl -X DELETE http://localhost:8080/api/tasks/1 \
+  -H "Accept: application/json"
+
+-Acceso a la app
+
+http://localhost:8080/tasks
+
+
+
+
+
+
+
+
 
 
