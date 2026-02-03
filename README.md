@@ -1,4 +1,4 @@
-# Proyecto "Agenda Digital"
+# Proyecto "Agenda Digital" (VERSION DEMO)
 Aplicación tipo Trello desarrollada con Laravel + Docker, que permite gestionar tareas mediante una API REST y una interfaz web con Drag & drop.
 
 ## Funcionalidades
@@ -53,6 +53,7 @@ curl -X DELETE http://localhost:8080/api/tasks/1 \
 -Acceso a la app
 
 http://localhost:8080/tasks
+
 
 
 
