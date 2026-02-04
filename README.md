@@ -54,6 +54,14 @@ curl -X DELETE http://localhost:8080/api/tasks/1 \
 
 http://localhost:8080/tasks
 
+## Ideas futuras
+
+-Agregar un sistema de usuarios con login
+-Poner fechas limite a tareas
+-Extension de Chromium que avise a el usuario por mail cuando una tarea se este por vencer
+-Historial de acciones de cada usuario con su agenda
+
+
 
 
 
