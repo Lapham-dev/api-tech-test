@@ -78,7 +78,7 @@ docker compose exec app cp .env.example .env
 
 docker compose exec app php artisan migrate 
 
--Haciendo todo paso a paso como esta en los comando nuevos la aplicacion ya estaria funcionando
+"HACIENDO TODO PASO A PASO COMO ESTA EN LOS COMANDOS YA LA APLICACION DEBERIA ESTAR FUNCIONANDO SIN PROBLEMA"
 
 ## EN CASO QUE PIDA PERMISOS
 
@@ -95,6 +95,7 @@ sudo docker compose up -d --build
 -Extension de Chromium que avise a el usuario por mail cuando una tarea se este por vencer
 
 -Historial de acciones de cada usuario con su agenda
+
 
 
 
