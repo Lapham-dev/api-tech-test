@@ -54,6 +54,32 @@ curl -X DELETE http://localhost:8080/api/tasks/1 \
 
 http://localhost:8080/tasks
 
+## Comandos ACTUALIZADOS 6/2/2026
+
+-Clonar Repositorio:
+
+-git clone https://github.com/Lapham-dev/api-tech-test.git
+ cd api-tech-test
+
+Levantar contenedores:
+
+-docker compose up -d --build
+
+Instalar Laravel:
+
+-docker compose exec app composer install
+
+Configuración del entorno:
+
+-docker compose exec app cp .env.example .env
+ docker compose exec app php artisan key:generate
+
+
+Migrar base de datos:
+
+-docker compose exec app php artisan migrate 
+
+
 ## Ideas futuras
 
 -Agregar un sistema de usuarios con login
@@ -63,6 +89,7 @@ http://localhost:8080/tasks
 -Extension de Chromium que avise a el usuario por mail cuando una tarea se este por vencer
 
 -Historial de acciones de cada usuario con su agenda
+
 
 
 
