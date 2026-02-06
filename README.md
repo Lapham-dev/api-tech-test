@@ -56,6 +56,8 @@ http://localhost:8080/tasks
 
 ## Comandos ACTUALIZADOS 6/2/2026
 
+"Ver de estar en la rama Dev"
+
 -Clonar Repositorio:
 
 git clone https://github.com/Lapham-dev/api-tech-test.git
@@ -95,6 +97,7 @@ sudo docker compose up -d --build
 -Extension de Chromium que avise a el usuario por mail cuando una tarea se este por vencer
 
 -Historial de acciones de cada usuario con su agenda
+
 
 
 
