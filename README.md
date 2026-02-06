@@ -78,6 +78,11 @@ docker compose exec app cp .env.example .env
 
 docker compose exec app php artisan migrate 
 
+## EN CASO QUE PIDA PERMISOS
+
+En caso que pida permisos pero no deberia, dejo esta linea de codigo aca: 
+
+sudo docker compose up -d --build
 
 ## Ideas futuras
 
@@ -88,6 +93,7 @@ docker compose exec app php artisan migrate
 -Extension de Chromium que avise a el usuario por mail cuando una tarea se este por vencer
 
 -Historial de acciones de cada usuario con su agenda
+
 
 
 
