@@ -1,63 +1,125 @@
 # Proyecto "Agenda Digital"
-Aplicación tipo Trello desarrollada con Laravel + Docker, que permite gestionar tareas mediante una API REST y una interfaz web con Drag & drop.
+
+
+
+Aplicación tipo Trello desarrollada con Laravel + Docker, que permite gestionar tareas mediante una API REST y una interfaz web con Drag \& drop.
 
 ## Funcionalidades
-- Crear tareas nuevas
-- Visualización en 3 columnas
-- Movimiento de tareas entre columnas mediante Drag & Drop
-- Persistencia de tareas en base de datos "Mysql"
-- Edición y eliminación de tareas
-- API REST desacoplada del frontend
-- Entorno completamente dockerizado
+
+
+
+* Crear tareas nuevas
+* Visualización en 3 columnas
+* Movimiento de tareas entre columnas mediante Drag \& Drop
+* Persistencia de tareas en base de datos "Mysql"
+* Edición y eliminación de tareas
+* API REST desacoplada del frontend
+* Entorno completamente dockerizado
+
+
 
 ## Tecnologías utilizadas
+
 Backend
-- PHP 8.2
-- Laravel
-- Eloquent ORM
-- MySQL 8
-- API REST (JSON)
+
+* PHP 8.2
+* Laravel
+* Eloquent ORM
+* MySQL 8
+* API REST (JSON)
 
 Frontend
-- Blade (Laravel Views)
-- HTML5
-- CSS
-- JavaScript (Vanilla JS)
-- Drag & Drop nativo del navegador
 
-## Comandos 
+* Blade (Laravel Views)
+* HTML5
+* CSS
+* JavaScript (Vanilla JS)
+* Drag \& Drop nativo del navegador
+
+
+
+## Comandos
+
+
 
 -Obtener tareas
 
 curl -H "Accept: application/json" http://localhost:8080/api/tasks
 
+
+
 -Crear una tarea
 
-curl -X POST http://localhost:8080/api/tasks \
-  -H "Content-Type: application/json" \
-  -H "Accept: application/json" \
-  -d '{"title":"Mi primera task","status":"backlog"}'
+curl -X POST http://localhost:8080/api/tasks   
+-H "Content-Type: application/json"   
+-H "Accept: application/json"   
+-d '{"title":"Mi primera task","status":"backlog"}'
+
+
 
 -Actualizar tarea
 
-curl -X PATCH http://localhost:8080/api/tasks/1 \
-  -H "Content-Type: application/json" \
-  -H "Accept: application/json" \
-  -d '{"status":"in_progress"}'
+curl -X PATCH http://localhost:8080/api/tasks/1   
+-H "Content-Type: application/json"   
+-H "Accept: application/json"   
+-d '{"status":"in\_progress"}'
+
+
 
 -Eliminar tarea
 
-curl -X DELETE http://localhost:8080/api/tasks/1 \
-  -H "Accept: application/json"
+curl -X DELETE http://localhost:8080/api/tasks/1   
+-H "Accept: application/json"
+
+
+
+-Comandos ACTUALIZADOS 6/2/2026
+
+
+
+-Clonar Repositorio:
+
+
+
+git clone https://github.com/Lapham-dev/api-tech-test.git cd api-tech-test
+
+
+
+-Levantar contenedores:
+
+
+
+docker compose up -d --build
+
+
+
+-Instalar Laravel:
+
+
+
+docker compose exec app composer install
+
+
+
+-Configuración del entorno:
+
+
+
+docker compose exec app cp .env.example .env docker compose exec app php artisan key:generate
+
+
+
+-Migrar base de datos:
+
+
+
+docker compose exec app php artisan migrate
+
+
 
 -Acceso a la app
 
 http://localhost:8080/tasks
-
-
-
-
-
 
 
 
