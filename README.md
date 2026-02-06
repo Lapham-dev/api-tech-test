@@ -58,26 +58,25 @@ http://localhost:8080/tasks
 
 -Clonar Repositorio:
 
--git clone https://github.com/Lapham-dev/api-tech-test.git
+git clone https://github.com/Lapham-dev/api-tech-test.git
  cd api-tech-test
 
-Levantar contenedores:
+-Levantar contenedores:
 
--docker compose up -d --build
+docker compose up -d --build
 
-Instalar Laravel:
+-Instalar Laravel:
 
--docker compose exec app composer install
+docker compose exec app composer install
 
-Configuración del entorno:
+-Configuración del entorno:
 
--docker compose exec app cp .env.example .env
+docker compose exec app cp .env.example .env
  docker compose exec app php artisan key:generate
 
+-Migrar base de datos:
 
-Migrar base de datos:
-
--docker compose exec app php artisan migrate 
+docker compose exec app php artisan migrate 
 
 
 ## Ideas futuras
@@ -89,6 +88,7 @@ Migrar base de datos:
 -Extension de Chromium que avise a el usuario por mail cuando una tarea se este por vencer
 
 -Historial de acciones de cada usuario con su agenda
+
 
 
 
